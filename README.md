@@ -1,6 +1,6 @@
 # PenguinPay
 
-It's an imaginary money transmitter app to send money from Binaria(currency capped to USD) to any one of these countries Kenya, Nigeria, Tanzania, Uganda, where sender and receiver amounts are in binary only. 
+It's an imaginary money transmitter app to send money from Binaria(currency capped to USD) to any one of these countries Kenya, Nigeria, Tanzania, Uganda, where sender and receiver amounts are in binary only. BIN has been used as the currency name for Binaria.
 
 # Rules
 
