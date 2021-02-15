@@ -47,7 +47,7 @@ public class PaymentViewModel {
     
     func senderAmountUpdatedTo(amount: String) {
         if let number = Int(amount, radix: 2) {
-            recipientAmountText.value = String(Int(currentExchangeRate * Double(number)), radix: 2)
+            recipientAmountText.value = String(Int((currentExchangeRate * Double(number)).rounded()), radix: 2)
             senderAmount = amount
             updateIsAllowedTosend()
         }
