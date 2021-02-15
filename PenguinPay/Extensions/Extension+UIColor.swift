@@ -1,5 +1,5 @@
 //
-//   UIColor+Palette.swift
+//  Extension+UIColor.swift
 //  PenguinPay
 //
 //

@@ -15,6 +15,4 @@ class CountriesRepository {
                 Country(name: "Uganda", alpha2Code: "UG", alpha3Code: "UGX", flag: .UG),
         ]
     }
-    
-    
 }

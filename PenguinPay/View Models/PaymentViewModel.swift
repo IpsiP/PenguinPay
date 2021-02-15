@@ -16,13 +16,13 @@ public class PaymentViewModel {
     var currentExchangeRate = 0.0
     let currancyText = Box(Constants.loading)
     let recipientAmountText = Box("0.00")
-    let senderAmountText = Box("$0.00")
+    let senderAmountText = Box("0.00")
     var isRecipientPhoneNumberValid = false
     var isAllowedToSend = Box(false)
     var countriesList = Box(Array<Country>())
     private static let defaultTargetCountryCode = Constants.kes
     let allowedContriesFlagList = Box(Array<FPNCountryCode>())
-    var selectedCountry = Box(Country(name: "", alpha2Code: "", alpha3Code: "", flag: .AD))
+    var selectedCountry = Box(Country(name: "", alpha2Code: "", alpha3Code: "", flag: .KE))
     
     init() {
         changeCountryCode(to: Self.defaultTargetCountryCode)
@@ -39,6 +39,7 @@ public class PaymentViewModel {
                 countryCode.value = selectedCountry.alpha3Code
                 self.selectedCountry.value = selectedCountry
             }
+            
             fetchExchangeRateFor(newCountryCode)
             updateIsAllowedTosend()
         }
@@ -73,6 +74,7 @@ public class PaymentViewModel {
     
     func updateIsAllowedTosend() {
         let isSenderAmounEntered = (Double(senderAmount) ?? 0.0) > 0
+        
         if(!recipientFirstName.value.isEmpty && !recipientLastName.value.isEmpty && isRecipientPhoneNumberValid && isSenderAmounEntered) {
             isAllowedToSend.value = true
         }else {
@@ -84,16 +86,19 @@ public class PaymentViewModel {
         recipientFirstName.value = ""
         recipientLastName.value = ""
         senderAmount = ""
-        senderAmountText.value = "$0.00"
+        senderAmountText.value = "0.00"
         recipientAmountText.value = "0.00"
         recipientsPhoneNumber.value = ""
         isRecipientPhoneNumberValid = false
         isAllowedToSend.value = false
+        selectedCountry.value = countriesList.value.first(where: { (country) -> Bool in
+            country.alpha3Code.contains(countryCode.value)
+        }) ?? countriesList.value[0]
         changeCountryCode(to: countryCode.value)
     }
     
     
-    //This method fetches eexchage rate for all countries
+    //This method fetches exchage rate for all countries
     fileprivate func fetchExchangeRateFor(_ countryCode: String) {
         self.countryCode.value = countryCode
         CurrancyExchangeService.exchangeRateFor(countryCode: countryCode) { [weak self] (exchangeData, error) in
@@ -103,14 +108,17 @@ public class PaymentViewModel {
             else {
                 return
             }
+            
             let exchangeRate = weakSelf.getCurrencyRateForCountryCode(countryCode: countryCode, exchangeData: exchangeData)
             weakSelf.currentExchangeRate = exchangeRate
+            
             if let selectedCountry = weakSelf.countriesList.value.first(where: { (country) -> Bool in
                 country.alpha3Code.contains(countryCode)
             }) {
-                weakSelf.currancyText.value = "$1 = " + String(exchangeRate) + " " + selectedCountry.alpha3Code
+                weakSelf.currancyText.value = "1 BIN = " + String(exchangeRate) + " " + selectedCountry.alpha3Code
             }
-            weakSelf.senderAmountText.value = "$0.00"
+            
+            weakSelf.senderAmountText.value = "0.00"
             weakSelf.recipientAmountText.value = "0.00"
         }
     }

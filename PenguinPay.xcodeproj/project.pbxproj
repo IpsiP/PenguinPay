@@ -21,6 +21,7 @@
 		175EDFA125D9811D0065B570 /* CountriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EDFA025D9811D0065B570 /* CountriesRepository.swift */; };
 		175EDFB725D9A6D80065B570 /* exchangeRates.json in Resources */ = {isa = PBXBuildFile; fileRef = 175EDFB625D9A6D80065B570 /* exchangeRates.json */; };
 		175EDFBF25D9A7A10065B570 /* ExchangeDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EDFBE25D9A7A10065B570 /* ExchangeDataTest.swift */; };
+		17B6FDE225DA7E9600E23006 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B6FDE125DA7E9600E23006 /* Extension+UIColor.swift */; };
 		17BC0E5125D6F107005BD1B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BC0E5025D6F107005BD1B4 /* AppDelegate.swift */; };
 		17BC0E5825D6F107005BD1B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17BC0E5625D6F107005BD1B4 /* Main.storyboard */; };
 		17BC0E5A25D6F108005BD1B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17BC0E5925D6F108005BD1B4 /* Assets.xcassets */; };
@@ -28,7 +29,6 @@
 		17BC0E6825D6F109005BD1B4 /* PenguinPayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BC0E6725D6F109005BD1B4 /* PenguinPayTests.swift */; };
 		17BC0E7325D6F109005BD1B4 /* PenguinPayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BC0E7225D6F109005BD1B4 /* PenguinPayUITests.swift */; };
 		17BC0E8E25D6F835005BD1B4 /* PaymentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BC0E8D25D6F835005BD1B4 /* PaymentController.swift */; };
-		17BC0E9D25D7276F005BD1B4 /*  UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BC0E9C25D7276F005BD1B4 /*  UIColor+Palette.swift */; };
 		9FA7373FAF637277BD906DD8 /* Pods_PenguinPayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B0929DB3CD3A59555C5BDE /* Pods_PenguinPayTests.framework */; };
 		C04CB96BEB789941F9D2F2E4 /* Pods_PenguinPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0C3C1C393618C73F6F107E6 /* Pods_PenguinPay.framework */; };
 		CBEDE688E78E1851D5E4AB5A /* Pods_PenguinPay_PenguinPayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A09BFEC376D9041E3AC8428 /* Pods_PenguinPay_PenguinPayUITests.framework */; };
@@ -67,6 +67,7 @@
 		175EDFA025D9811D0065B570 /* CountriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesRepository.swift; sourceTree = "<group>"; };
 		175EDFB625D9A6D80065B570 /* exchangeRates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = exchangeRates.json; sourceTree = "<group>"; };
 		175EDFBE25D9A7A10065B570 /* ExchangeDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeDataTest.swift; sourceTree = "<group>"; };
+		17B6FDE125DA7E9600E23006 /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
 		17BC0E4D25D6F107005BD1B4 /* PenguinPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenguinPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BC0E5025D6F107005BD1B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17BC0E5725D6F107005BD1B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,7 +81,6 @@
 		17BC0E7225D6F109005BD1B4 /* PenguinPayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenguinPayUITests.swift; sourceTree = "<group>"; };
 		17BC0E7425D6F109005BD1B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17BC0E8D25D6F835005BD1B4 /* PaymentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentController.swift; sourceTree = "<group>"; };
-		17BC0E9C25D7276F005BD1B4 /*  UIColor+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " UIColor+Palette.swift"; sourceTree = "<group>"; };
 		18DF3B9DBB45DDED122E69EB /* Pods-PenguinPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PenguinPay.release.xcconfig"; path = "Target Support Files/Pods-PenguinPay/Pods-PenguinPay.release.xcconfig"; sourceTree = "<group>"; };
 		3B8E6B46C24FF3AC92E2B5E5 /* Pods-PenguinPayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PenguinPayTests.debug.xcconfig"; path = "Target Support Files/Pods-PenguinPayTests/Pods-PenguinPayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4A09BFEC376D9041E3AC8428 /* Pods_PenguinPay_PenguinPayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PenguinPay_PenguinPayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,9 +255,9 @@
 		17BC0E9B25D7272A005BD1B4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				17BC0E9C25D7276F005BD1B4 /*  UIColor+Palette.swift */,
 				175EDF5725D82B1F0065B570 /* Extension+UIView.swift */,
 				172BD99425D9CC76008721EC /* Extension+UITableView.swift */,
+				17B6FDE125DA7E9600E23006 /* Extension+UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -524,7 +524,6 @@
 			files = (
 				172BD99525D9CC76008721EC /* Extension+UITableView.swift in Sources */,
 				17BC0E5125D6F107005BD1B4 /* AppDelegate.swift in Sources */,
-				17BC0E9D25D7276F005BD1B4 /*  UIColor+Palette.swift in Sources */,
 				175EDF5D25D844FE0065B570 /* PenguinTextField.swift in Sources */,
 				175EDF2825D7C2630065B570 /* ExchangeData.swift in Sources */,
 				175EDFA125D9811D0065B570 /* CountriesRepository.swift in Sources */,
@@ -533,6 +532,7 @@
 				175EDF4225D7F4B50065B570 /* DropDownView.swift in Sources */,
 				175EDF9B25D97FF60065B570 /* Country.swift in Sources */,
 				175EDF2E25D7CDA90065B570 /* PaymentViewModel.swift in Sources */,
+				17B6FDE225DA7E9600E23006 /* Extension+UIColor.swift in Sources */,
 				172BD99A25D9CD31008721EC /* Constants.swift in Sources */,
 				17BC0E8E25D6F835005BD1B4 /* PaymentController.swift in Sources */,
 				175EDF5825D82B1F0065B570 /* Extension+UIView.swift in Sources */,

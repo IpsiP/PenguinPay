@@ -18,7 +18,6 @@ class DropDownView: UIView {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var dropDownImage: UIImageView!
     
-    
     fileprivate var picker  = UIPickerView()
     fileprivate var toolBar = UIToolbar()
     var options = Array<Country>()
@@ -46,7 +45,6 @@ class DropDownView: UIView {
         }
     }
 
-    
     var updateAvailable: Bool? {
         didSet {
             if(updateAvailable == true) {
@@ -57,7 +55,6 @@ class DropDownView: UIView {
         }
     }
 
-    
     fileprivate func setup() {
         view = loadViewFromNib()
         view.frame = bounds
@@ -116,7 +113,6 @@ class DropDownView: UIView {
         toolBar.removeFromSuperview()
         picker.removeFromSuperview()
     }
-    
 }
 
 // MARK: - UIPickerViewDelegate, UIPickerViewDataSource
@@ -124,7 +120,6 @@ extension DropDownView: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return options.count
@@ -142,6 +137,7 @@ extension DropDownView: UIPickerViewDelegate, UIPickerViewDataSource {
         let selectedCountry = options[row].alpha3Code
         let countryFlagString = countryFlag(countryCode: options[row].alpha2Code)
         var label: UILabel
+        
         if let view = view as? UILabel {
             label = view
         }else {

@@ -98,10 +98,10 @@ class PaymentController: UIViewController {
     }
     
     fileprivate func setUpView() {
-        navigationController?.navigationBar.barTintColor = UIColor.azure
+        navigationController?.navigationBar.barTintColor = UIColor.primaryBlue
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
-        cardView.backgroundColor = UIColor.veryLightPink
         
+        cardView.backgroundColor = UIColor.veryLightPink
         cardView.layer.cornerRadius = 10.0
         cardView.layer.shadowColor = UIColor.gray.cgColor
         cardView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
@@ -110,22 +110,23 @@ class PaymentController: UIViewController {
         
         recipientView.updateAvailable = true
         recipientView.delegate = self
+        
         recieveTextField.isUserInteractionEnabled = false
         sendButton.backgroundColor = UIColor.primaryBlue
+        
         phoneNumberTextField.addDoneButtonOnKeyboard()
         phoneNumberTextField.keyboardAppearance = .dark
         phoneNumberTextField.applyPenguinTextFieldStyle()
     }
 
-    
-    func resetTextFieldes() {
+    fileprivate func resetTextFieldes() {
         for view in scrollView.subviews[0].subviews[0].subviews {
             if let textField = view as? UITextField {
                 textField.text = ""
             }
         }
+        
         UIApplication.shared.sendAction(#selector(UIApplication.resignFirstResponder), to: nil, from: nil, for: nil);
-
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -147,7 +148,6 @@ class PaymentController: UIViewController {
         listController.dismiss(animated: true, completion: nil)
     }
 }
-
 
 // MARK: - DropDownViewDelegate
 
