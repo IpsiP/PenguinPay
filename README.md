@@ -6,7 +6,7 @@ It's an imaginary money transmitter app to send money from Binaria(currency capp
 
 Allowed to enter the amount only in binary.
 Recipient amount will also be shown in binary.
-Able to select a country by either from phone number field or reipient country drop down.
+Able to select a country by either from the phone number field or recipient country drop down.
 All fields are mandatory to execute a valid transaction
 
 # Technical Specification
@@ -14,4 +14,5 @@ All fields are mandatory to execute a valid transaction
 Designed using MVVM design pattern.
 Minimum OS version required to run the app is iOS 12.
 Used Swift 5 and Xcode 12.4 for development.
+
 
